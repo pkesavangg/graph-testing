@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,39 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div id="container">
+    <swiper-container
+    #swiper
+    [navigation]="true"
+    [pagination]="true"
+    [effect]="'creative'"
+    [loop]="true"
+    [slidesPerView]="1.25"
+    [loopedSlides]="3"
+    [slidesPerView]="3"
+    [centeredSlides]="true"
+    [spaceBetween]="30"
+    [creativeEffect]="{
+      limitProgress: 2,
+      prev: {
+        opacity: 0.4,
+        scale: 0.85,
+        translate: ['-90%', 0, 0]
+      },
+      next: {
+        opacity: 0.4,
+        scale: 0.85,
+        translate: ['90%', 0, 0]
+      }
+    }">
+      <swiper-slide *ngFor="let image of testImages">
+        <img style="height: 300px;" class="swiperImage" src="{{image}}" alt="">
+      </swiper-slide>
+    </swiper-container>
+  </div>
+
 </ion-content>

@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+     D3 js Graph
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content style="text-align: center;">
+  <ion-button (click) = "navigateToHelpPage()" >Go To Help</ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div id="viz" class="viz" width="1000" height="325"></div>
+
+  <ion-button style="padding: 1rem;" (click)="refreshGraph()">Refresh Graph</ion-button>
 </ion-content>
+
+
+

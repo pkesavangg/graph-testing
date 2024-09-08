@@ -1,17 +1,16 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Graph Refresh
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!-- <ion-content style="text-align: center;">
+  <canvas #chartCanvas width="400" height="350"></canvas>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+  <ion-button style="padding: 1rem;" (click)="refreshGraph()">Refresh Graph</ion-button>
+</ion-content> -->
+<ion-card-content>
+  <canvas #lineCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+</ion-card-content>
