@@ -17,7 +17,9 @@ let package = Package(
         .package(name: "CapacitorClipboard", path: "../../../node_modules/@capacitor/clipboard"),
         .package(name: "CapacitorHaptics", path: "../../../node_modules/@capacitor/haptics"),
         .package(name: "CapacitorKeyboard", path: "../../../node_modules/@capacitor/keyboard"),
-        .package(name: "CapacitorStatusBar", path: "../../../node_modules/@capacitor/status-bar")
+        .package(name: "CapacitorStatusBar", path: "../../../node_modules/@capacitor/status-bar"),
+        .package(name: "GreatergoodsGgBluetoothIonicPlugin", path: "../../../../ggBluetoothIonicPlugin"),
+        .package(name: "ContactsPlugin", path: "../../../../contacts-plugin")
     ],
     targets: [
         .target(
@@ -30,7 +32,9 @@ let package = Package(
                 .product(name: "CapacitorClipboard", package: "CapacitorClipboard"),
                 .product(name: "CapacitorHaptics", package: "CapacitorHaptics"),
                 .product(name: "CapacitorKeyboard", package: "CapacitorKeyboard"),
-                .product(name: "CapacitorStatusBar", package: "CapacitorStatusBar")
+                .product(name: "CapacitorStatusBar", package: "CapacitorStatusBar"),
+                .product(name: "GreatergoodsGgBluetoothIonicPlugin", package: "GreatergoodsGgBluetoothIonicPlugin"),
+                .product(name: "ContactsPlugin", package: "ContactsPlugin")
             ]
         )
     ]
