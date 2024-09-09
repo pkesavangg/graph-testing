@@ -1,6 +1,8 @@
 import { AfterViewInit, Component } from '@angular/core';
 import * as d3 from 'd3';
 import { Browser } from '@capacitor/browser';
+import { ContactsPlugin } from 'contacts-plugin';
+// import { GGBluetoothIonic } from '@greatergoods/gg-bluetooth-ionic-plugin';
 interface DataPoint {
   date: Date;
   value: number;
@@ -23,6 +25,10 @@ export class Tab1Page implements AfterViewInit {
 
   ngAfterViewInit() {
     this.drawChart();
+  }
+
+  getContacts() {
+    ContactsPlugin.getContacts({value: "testing"})
   }
 
   drawChart(): void {
@@ -190,5 +196,6 @@ export class Tab1Page implements AfterViewInit {
 
     // Redraw the chart
     this.drawChart();
+    // GGBluetoothIonic.isDarkMode()
   }
 }
